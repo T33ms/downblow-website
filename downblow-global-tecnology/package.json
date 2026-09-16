@@ -1,0 +1,15 @@
+{
+  "name": "downblow-global-tecnology",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Downblow Global Tecnology Nigerian gadget store",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "axios": "^1.7.9"
+  }
+}

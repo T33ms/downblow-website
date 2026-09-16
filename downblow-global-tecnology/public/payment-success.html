@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Order confirmation | Downblow</title>
+<style>body{margin:0;background:#07090c;color:#fff;font-family:Inter,Arial,sans-serif;display:grid;place-items:center;min-height:100vh}.card{width:min(600px,90%);background:#10151c;border:1px solid #29323e;border-radius:24px;padding:35px;text-align:center}.logo{width:130px;background:#fff;border-radius:12px}.gold{color:#f0c552}.ref{background:#07090c;border-radius:12px;padding:15px;margin:20px 0;font-weight:700}a{display:inline-block;background:#d9a72f;color:#111;text-decoration:none;font-weight:800;padding:13px 18px;border-radius:10px}</style></head>
+<body><div class="card"><img class="logo" src="/logo.png" alt="Downblow"><h1>Payment received</h1><p>Your payment has been returned by Paystack. Please keep your reference below.</p><div class="ref" id="ref">Checking payment...</div><p class="gold" id="status"></p><a href="/">Continue shopping</a></div>
+<script>
+const ref=new URLSearchParams(location.search).get('reference');
+document.getElementById('ref').textContent=ref||'No reference found';
+if(ref){fetch('/api/paystack/verify/'+encodeURIComponent(ref)).then(r=>r.json()).then(d=>{document.getElementById('status').textContent=d?.data?.status==='success'?'Payment verified successfully.':'Payment status: '+(d?.data?.status||'pending');}).catch(()=>document.getElementById('status').textContent='Payment status could not be verified automatically.');}
+</script></body></html>

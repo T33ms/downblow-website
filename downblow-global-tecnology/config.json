@@ -1,0 +1,24 @@
+{
+  "business": {
+    "name": "Downblow Global Tecnology",
+    "phone": "08134543860",
+    "email": "Orilolatope7@gmail.com",
+    "location": "Ibadan, Oyo State, Nigeria",
+    "delivery": "Nationwide"
+  },
+  "preorder": {
+    "product": "iPhone 18 Pro Max",
+    "deposit": 500000,
+    "status": "placeholder - confirm official Downblow amount"
+  },
+  "deliveryFees": {
+    "Oyo": 0,
+    "Lagos": 0,
+    "Osun": 0,
+    "Ogun": 0,
+    "FCT": 0,
+    "Rivers": 0,
+    "Kano": 0,
+    "Other": 0
+  }
+}
